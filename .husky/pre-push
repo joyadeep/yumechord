@@ -1,0 +1,6 @@
+echo "Running pre-push hook..."
+pnpm run build || {
+    echo "Build failed ! Push Aborted"
+    exit 1
+}
+echo "Build Succeeded ! Pushing..."
