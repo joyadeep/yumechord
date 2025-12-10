@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -51,7 +51,9 @@ export default function Home() {
             />
             Deploy Now
           </a>
-          <Button size="lg" className="cursor-pointer">Button</Button>
+          <Button size="lg" className="cursor-pointer">
+            Button
+          </Button>
         </div>
       </main>
     </div>
