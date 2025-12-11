@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const Chords = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>(null);
-  const [isScrolling, setIsScrolling] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
   const [speed, setSpeed] = useState(5);
   const scrollToBottom = () => {
     setIsScrolling((preval) => !preval);
