@@ -1,4 +1,5 @@
 "use client";
+import { Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -49,15 +50,20 @@ const Chords = () => {
 
   return (
     <div className="p-5">
-      <Button className="rounded-full cursor-pointer" onClick={scrollToBottom}>
-        AutoScroll
-      </Button>
-      <Button
-        className="rounded-full cursor-pointer"
-        onClick={() => updateSpeed}
-      >
-        Speed
-      </Button>
+      <section className="flex gap-3">
+        <Button
+          className="rounded-full cursor-pointer"
+          onClick={scrollToBottom}
+        >
+          {isScrolling ? <Pause /> : <Play />} AutoScroll
+        </Button>
+        <Button
+          className="rounded-full cursor-pointer"
+          onClick={() => updateSpeed}
+        >
+          Speed
+        </Button>
+      </section>
       <h1 className="font-semibold text-xl">Chords</h1>
       <div ref={scrollRef} className="h-96">
         <pre>
